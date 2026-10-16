@@ -45,8 +45,3 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 /android/build
-
-# temp
-assets/discord
-android/app/src/main/cpp
-android/app/src/main/jniLibs

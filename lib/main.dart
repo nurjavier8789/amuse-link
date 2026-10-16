@@ -1,3 +1,4 @@
+// import 'package:material_ui/material_ui.dart';
 import 'package:flutter/material.dart';
 
 import 'package:dynamic_color/dynamic_color.dart';
@@ -27,33 +28,45 @@ class Bridge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DynamicColorBuilder(
-      builder: (ColorScheme? lightDynamic, ColorScheme? darkDynamic) {
-        ColorScheme lightScheme;
-        ColorScheme darkScheme;
-
-        if (lightDynamic != null && darkDynamic != null) {
-          lightScheme = lightDynamic.harmonized();
-          darkScheme = darkDynamic.harmonized();
-        } else {
-          lightScheme = defaultLightColorScheme;
-          darkScheme = defaultDarkColorScheme;
-        }
-
-        return MaterialApp(
+    return MaterialApp(
           themeMode: ThemeMode.system,
           theme: ThemeData(
-            colorScheme: lightScheme,
+            // colorScheme: lightScheme,
             useMaterial3: true,
           ),
           darkTheme: ThemeData(
-            colorScheme: darkScheme,
+            // colorScheme: darkScheme,
             useMaterial3: true,
           ),
           home: Init(),
         );
-      },
-    );
+    // return DynamicColorBuilder(
+    //   builder: (lightDynamic, darkDynamic) {
+    //     // ColorScheme lightScheme;
+    //     // ColorScheme darkScheme;
+
+    //     if (lightDynamic != null && darkDynamic != null) {
+    //       // lightScheme = lightDynamic;
+    //       // darkScheme = darkDynamic;
+    //     } else {
+    //       // lightScheme = defaultLightColorScheme;
+    //       // darkScheme = defaultDarkColorScheme;
+    //     }
+
+    //     return MaterialApp(
+    //       themeMode: ThemeMode.system,
+    //       theme: ThemeData(
+    //         // colorScheme: lightScheme,
+    //         useMaterial3: true,
+    //       ),
+    //       darkTheme: ThemeData(
+    //         // colorScheme: darkScheme,
+    //         useMaterial3: true,
+    //       ),
+    //       home: Init(),
+    //     );
+    //   },
+    // );
   }
 }
 
